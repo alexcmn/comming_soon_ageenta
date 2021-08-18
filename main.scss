@@ -73,7 +73,7 @@ section{
                     font-weight: 900;
                     text-transform: uppercase;
                     letter-spacing: 5px;
-                    line-height: 75px;
+                    line-height: 100px;
                     margin-bottom: 40px;
                     span{
                         font-size: 1.2em;
@@ -162,7 +162,8 @@ section{
                 article{
                     h1{
                         font-size: 2em;
-                        line-height: 40px;
+                        line-height: 50px;
+                        white-space: nowrap;
                     }
                     p{
                         margin-bottom: unset;
