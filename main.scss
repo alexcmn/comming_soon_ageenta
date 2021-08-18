@@ -47,47 +47,49 @@ section{
             width: 100%;
             height: 100%;
             object-fit: cover;
-            &.video-slide{
-                position: absolute;
-                width: 100%;
-                clip-path: circle(0% at 0 50%);
+            clip-path: circle(0% at 0 50%);
+            // &.video-slide{
+                // position: absolute;
+                // width: 100%;
                 &.active{
                     clip-path: circle(150% at 0 50%);
                     transition: 2s ease;
                     transition-property: clip-path;
                 }
-            }
+            // }
         }
         .content{
             z-index: 888;
-            color: #fff;
-            width: 70%;
-            margin-top: 50px;
-            display: none;
-            &.active{
-                display: block;
-            }
-            h1{
-                font-size: 4em;
-                font-weight: 900;
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                line-height: 75px;
-                margin-bottom: 40px;
-                span{
-                    font-size: 1.2em;
-                    font-weight: 600;
-                    color: #fff;
+            article{
+                color: #fff;
+                width: 70%;
+                margin-top: 50px;
+                display: none;
+                &.active{
+                    display: block;
                 }
-            }
-            p{
-                margin-bottom: 65px;
+                h1{
+                    font-size: 4em;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    line-height: 75px;
+                    margin-bottom: 40px;
+                    span{
+                        font-size: 1.2em;
+                        // font-weight: 600;
+                        color: #e53c37;
+                    }
+                }
+                p{
+                    margin-bottom: 65px;
+                }
             }
         }
         .media-icons{
             z-index: 888;
             position: absolute;
-            right: 30px;
+            left: 30px;
             display: flex;
             flex-direction: column;
             transition: 0.5s ease;
@@ -104,29 +106,34 @@ section{
             }
         }
         .slider-navigation{
-            position: relative;
+            position: absolute;
+            right: 30px;
+            top: 50%;
             z-index: 888;
             display: flex;
             align-items: center;
             justify-content: center;
-            transform: translateY(80px);
-            margin-bottom: 12px;
-            .nav-btn{
-                width: 1rem;
-                height: 1rem;
-                border-radius: 50%;
-                background: #fff;
+            flex-direction: column;
+            transform: translateY(-50%);
+            width: 2px;
+            background-color: rgba($color: #fff, $alpha: 0.25);
+            height: 100%;
+            list-style: none;
+            margin: 0;
+            li{
+                width: 3px;
+                height: calc(100% / 3);
+                // border-radius: 50%;
+                background-color: rgba($color: #fff, $alpha: 0.25);
                 cursor: pointer;
-                box-shadow: 0 0 2px rgba($color: #fff, $alpha: 0.5);
+                // box-shadow: 0 0 2px rgba($color: #fff, $alpha: 0.5);
                 transition: 0.3s ease;
                 &.active{
                     background: #e53c37;
+                    width: 5px;
                 }
                 &:not(:last-child){
-                    margin-right: 20px;
-                }
-                &:hover{
-                    transform: scale(1.2);
+                    // margin-bottom: 20px;
                 }
             }
         }
@@ -134,7 +141,7 @@ section{
             z-index: 777;
             content: '';
             position: absolute;
-            background: rgba(229, 60, 55, 0.25);
+            background: rgba(0, 0, 0, 0.6);
             width: 100%;
             height: 100%;
             top: 0;
@@ -152,16 +159,27 @@ section{
         padding: 100px 20px;
         &.home{
             .content{
-                h1{
-                    font-size: 2em;
-                    line-height: 30px;
-                }
-                p{
-                    margin-bottom: unset;
+                article{
+                    h1{
+                        font-size: 2em;
+                        line-height: 40px;
+                    }
+                    p{
+                        margin-bottom: unset;
+                        line-height: unset;
+                        font-size: 10px !important;
+                    }
                 }
             }
             .media-icons{
-                right: 15px;
+                left: 1rem;
+                bottom: 1rem;
+                a{
+                    font-size: 1.2em;
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                }
             }
         }
     }
