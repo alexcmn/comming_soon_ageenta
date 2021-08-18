@@ -8,6 +8,10 @@
     user-select: none;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 header{
     position: absolute;
     z-index: 999;
@@ -147,6 +151,15 @@ section{
     section{
         padding: 100px 20px;
         &.home{
+            .content{
+                h1{
+                    font-size: 2em;
+                    line-height: 30px;
+                }
+                p{
+                    margin-bottom: unset;
+                }
+            }
             .media-icons{
                 right: 15px;
             }
